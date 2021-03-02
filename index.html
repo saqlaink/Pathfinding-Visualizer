@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pathfinding Visualizer</title>
+    <link
+      rel="shortcut icon"
+      type="image/jpg"
+      href="./img/Pathfinding-Algo-Icon.png"
+    />
+
+    <link rel="stylesheet" href="./css/buttons.css" />
+    <link rel="stylesheet" href="./css/dropdown.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="userControls">
+      <span class="text" onClick="refreshPage()">Pathfinding Visualizer</span>
+      <div class="select">
+        <select
+          name="pathfindingAlgo"
+          class="dropdown-select decorated"
+          id="pathfindingAlgo"
+          onchange="initialize();"
+        >
+          <option value="breadth">Breadth First Search</option>
+          <option value="depth">Depth First Search</option>
+          <option value="best">Greedy Best First Search</option>
+          <option value="astar">A* Algorithm</option>
+          <option value="dijkstra">Dijkstra's Algorithm</option>
+        </select>
+      </div>
+
+      <span
+        id="visualize"
+        type="button"
+        class="btn btn-start"
+        onclick="pathfinder();"
+        >Visualize!</span
+      >
+
+      <br class="mobile-break" />
+      <span
+        id="randomMaze"
+        type="button"
+        class="btn btn-start"
+        onclick="generateMaze('random');"
+        >Random Wall Maze</span
+      >
+      <span
+        id="recdivMaze"
+        type="button"
+        class="btn btn-start"
+        title="Recursive Division Maze"
+        onclick="generateMaze('recdiv');"
+        >RecDiv Maze</span
+      >
+      <span
+        id="randomWeight"
+        type="button"
+        class="btn btn-start"
+        onclick="generateMaze('randomWeight');"
+        >Random Weight Maze</span
+      >
+
+      <br class="mobile-break" />
+      <span
+        id="resetPathBtn"
+        type="button"
+        class="btn btn-pause"
+        onclick="resetPath();"
+        >Clear Path</span
+      >
+      <span id="resetBtn" type="button" class="btn btn-reset" onclick="reset();"
+        >Reset</span
+      >
+    </div>
+
+    <canvas id="main-canvas"></canvas>
+  </body>
+
+  <script src="./js/Cell.js"></script>
+  <script src="./js/Board.js"></script>
+  <script src="./js/algorithms/breadth.js"></script>
+  <script src="./js/algorithms/depth.js"></script>
+  <script src="./js/algorithms/best.js"></script>
+  <script src="./js/algorithms/astar.js"></script>
+  <script src="./js/algorithms/dijkstra.js"></script>
+  <script src="./js/utils.js"></script>
+  <script src="./js/sketch.js"></script>
+  <script src="./js/events.js"></script>
+  <script src="./js/maze algorithm/random.js"></script>
+  <script src="./js/maze algorithm/recursiveDivision.js"></script>
+</html>

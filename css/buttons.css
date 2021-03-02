@@ -1,0 +1,46 @@
+.btn {
+  padding: 0.45em 0.65em;
+  border-radius: 0.3em;
+  color: #ffffff;
+  margin-top: 0.3em !important;
+  font-size: 0.95em;
+  box-sizing: border-box;
+  max-height: 2.5em;
+  user-select: none;
+}
+
+.btn-start {
+  border: 1.7px solid #1abc9c;
+}
+
+.btn-start:hover {
+  background: #1abc9c;
+  cursor: pointer;
+  color: black;
+}
+
+.btn-pause {
+  color: white;
+  border: 1.7px solid #1abc9c;
+}
+
+.btn-pause:hover {
+  background: #1abc9c;
+  cursor: pointer;
+  color: black;
+}
+
+.btn-reset {
+  background: #fd4659;
+  color: black;
+}
+
+.btn-reset:hover {
+  background: #c03a36;
+  cursor: pointer;
+}
+
+.btn-reset:active {
+  background: #c03a36;
+  cursor: pointer;
+}
